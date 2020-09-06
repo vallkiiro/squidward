@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.eye1 {
+			width: 75px;
+			height: 150px;
+			background-color: yellow;
+			position: absolute;
+			top: 200px;
+			left: 600px;
+			transition: 3s;
+			
+		}
+		.eye2 {
+			width: 75px;
+			height: 150px;
+			background-color: red;
+			border-radius: 50px;
+			position: absolute;
+			top: 200px;
+			left: 600px;
+			transition: 3s;
+			
+		}
+		.head{
+			width: 50px;
+			height: 60px;
+			background-color: green;
+			position: absolute;
+			left: 600px;
+			top: 200px;
+			transition: 4s;
+			border: 1px solid black;
+		}
+		.nose{
+			width: 60px;
+			height: 150px;
+			background-color: green;
+			position: absolute;
+			left: 600px;
+			top: 200px;
+			transition: 3s;
+			border: 1px solid black;
+		}
+		.jaw{
+			width: 60px;
+			height: 100px;
+			background-color: #84b8a4;
+			position: absolute;
+			left: 600px;
+			top: 200px;
+			transition: 3s;
+			border: 1px solid black;
+		}
+		.pupil{
+			width: 20px;
+			height: 80px;
+			background-color: black;
+			position: absolute;
+			left: 630px;
+			top: 230px;
+		}
+		.pupil2{
+			width: 20px;
+			height: 80px;
+			background-color: black;
+			position: absolute;
+			left: 700px;
+			top: 230px;
+		}
+		.mouth {
+			width: 200px;
+			height: 5px;
+			background-color: black;
+			position: absolute;
+			left: 570px;
+			top: 360px;
+			border-radius: 100px;
+		}
+		.wrinkle2{
+			width: 200px;
+			height: 2px;
+			background-color: black;
+			position: absolute;
+			left: 570px;
+			top: 150px;
+			border-radius: 100px;
+		}
+		.wrinkle1{
+			width: 100px;
+			height: 2px;
+			background-color: black;
+			position: absolute;
+			left: 620px;
+			top: 130px;
+			border-radius: 100px;
+		}
+		.wrinkle3{
+			width: 170px;
+			height: 2px;
+			background-color: black;
+			position: absolute;
+			left: 590px;
+			top: 170px;
+			border-radius: 100px;
+		}
+		.hat{
+			position: absolute;
+			left: 650px;
+			width: 100px;
+			top: 0px;
+		}
+		.box1 {
+			width: 10px;
+			height: 10px;
+			background-color: black;
+			position: absolute;
+			left: 600px;
+			top: 200px;
+			transition: 2s;
+			border-radius: 100px;
+		}
+		.box2 {
+			width: 10px;
+			height: 10px;
+			background-color: #1a2e1a;
+			position: absolute;
+			left: 600px;
+			top: 200px;
+			border-radius: 100px;
+			transition: 0.5s;
+		}
+	</style>
+</head>
+<body>
+	<div class="box2"></div>
+	<div class="box1"></div>
+	<div class="head"></div>
+	<div class="jaw"></div>
+	<div class="mouth"></div>
+	<div class="nose"></div>
+	<div class="eye1"></div>
+	<div class="eye2"></div>
+	<div class="pupil"></div>
+	<div class="pupil2"></div>
+	<div class="wrinkle2"></div>
+	<div class="wrinkle1"></div>
+	<div class="wrinkle3"></div>
+	<img src="шапка.png" class="hat">
+
+
+	<script type="text/javascript">
+		document.querySelector(".pupil").style.display = "none";
+		document.querySelector(".pupil2").style.display = "none";
+
+		document.querySelector(".mouth").style.display = "none";
+
+		document.querySelector(".wrinkle3").style.display = "none";
+		document.querySelector(".wrinkle2").style.display = "none";
+		document.querySelector(".wrinkle1").style.display = "none";
+
+		document.querySelector(".hat").style.display = "none";
+
+		document.querySelector(".eye2").onclick = function(){
+			document.querySelector(".eye2").style.left = "675px"
+			document.querySelector(".eye1").style.borderRadius = "50px";
+			document.querySelector(".eye1").style.backgroundColor = "#edeab4";
+			document.querySelector(".eye2").style.backgroundColor = "#edeab4";
+
+			document.querySelector(".head").style.width = "350px";
+			document.querySelector(".head").style.height = "200px";
+			document.querySelector(".head").style.top = "100px";
+			document.querySelector(".head").style.left = "505px";
+			document.querySelector(".head").style.borderRadius = "100px";
+			document.querySelector(".head").style.backgroundColor = " #84b8a4";
+
+			document.querySelector(".nose").style.left = "635px";
+			document.querySelector(".nose").style.top = "300px";
+			document.querySelector(".nose").style.width = "80px";
+			document.querySelector(".nose").style.borderRadius = "50px";
+			document.querySelector(".nose").style.backgroundColor = " #84b8a4";
+
+			document.querySelector(".jaw").style.left = "550px";
+			document.querySelector(".jaw").style.top = "300px";
+			document.querySelector(".jaw").style.width = "250px";
+			document.querySelector(".jaw").style.borderRadius = "50px";
+		}
+		document.querySelector(".eye1").onclick = function(){
+			document.querySelector(".pupil").style.display = "block";
+			document.querySelector(".pupil2").style.display = "block";
+			document.querySelector(".mouth").style.display = "block";
+			document.querySelector(".wrinkle1").style.display = "block";
+			document.querySelector(".wrinkle2").style.display = "block";
+			document.querySelector(".wrinkle3").style.display = "block";
+		}
+		document.querySelector(".nose").onclick = function(){
+			document.querySelector(".hat").style.display = "block";
+		}
+		document.querySelector(".hat").onclick = function(){
+			document.querySelector(".box1").style.width = "500px";
+			document.querySelector(".box1").style.height = "500px";
+			document.querySelector(".box1").style.left = "425px";
+			document.querySelector(".box1").style.top = "70px";
+			document.querySelector(".box1").style.borderRadius = "0px";
+			
+			document.querySelector(".box2").style.width = "600px";
+			document.querySelector(".box2").style.height = "600px";
+			document.querySelector(".box2").style.left = "375px";
+			document.querySelector(".box2").style.top = "20px";
+			document.querySelector(".box2").style.borderRadius = "50px";
+		}
+	</script>
+</body>
+</html>
